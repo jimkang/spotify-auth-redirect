@@ -1,0 +1,27 @@
+{
+  "name": "spotify-auth-redirect",
+  "version": "1.0.0",
+  "description": "Boilerplate code for redirecting the browser to a Spotify authorization page.",
+  "main": "index.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:jimkang/spotify-auth-redirect.git"
+  },
+  "keywords": [
+    "spotify",
+    "auth",
+    "browser"
+  ],
+  "author": "Jim Kang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jimkang/spotify-auth-redirect/issues"
+  },
+  "homepage": "https://github.com/jimkang/spotify-auth-redirect",
+  "dependencies": {
+    "qs": "^6.9.4"
+  }
+}
