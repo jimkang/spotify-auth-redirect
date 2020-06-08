@@ -1,11 +1,17 @@
 import qs from 'qs';
 
-export function spotifyAuthRedirect({ clientId, scopesString = '', stateDict = {} }) {
+export function spotifyAuthRedirect({
+  clientId,
+  scopesString = '',
+  stateDict = {}
+}) {
   var redirectURI =
     window.location.protocol +
     '//' +
     window.location.host +
     window.location.pathname;
+
+  delete stateDict.state;
 
   var stateString = qs.stringify(stateDict);
   var authURI =

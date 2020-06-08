@@ -23,5 +23,8 @@
   "homepage": "https://github.com/jimkang/spotify-auth-redirect",
   "dependencies": {
     "qs": "^6.9.4"
+  },
+  "devDependencies": {
+    "eslint": "^7.2.0"
   }
 }
