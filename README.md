@@ -14,7 +14,7 @@ Installation
 Usage
 -----
 
-    import { spotifyAuthRedirect } from 'spotify-auth-redirect';
+    import { spotifyAuthRedirect, unpackStateDict } from 'spotify-auth-redirect';
     import { isSpotifyTokenValid } from 'is-spotify-token-valid';
 
     var currentState = {
@@ -45,6 +45,29 @@ Usage
     }
 
 Note: `scopesString` and `stateDict` are optional params.
+
+## Unpacking state
+
+*After* the Spotify account auth page redirects you back to your app, you can unpack the `state` query param in the URL with `unpackStateDict`.
+
+e.g.
+
+    import { spotifyAuthRedirect, unpackStateDict } from 'spotify-auth-redirect';
+    import qs from 'qs';
+
+    var queryParams = qs.parse(window.location.query);
+    var state;
+    if (queryParams.state) {
+      state = unpackStateDict(queryParams.state);
+      console.log(state);
+    }
+
+This will log something like:
+
+    {
+      color: 'blue',
+      quantity: 9000
+    }
 
 License
 -------

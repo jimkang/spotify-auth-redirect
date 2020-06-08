@@ -29,3 +29,7 @@ export function spotifyAuthRedirect({
 
   window.location.href = authURI;
 }
+
+export function unpackStateDict(encodedStateFromRedirect) {
+  return qs.parse(decodeURIComponent(encodedStateFromRedirect));
+}
